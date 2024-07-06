@@ -1,0 +1,17 @@
+meta {
+  name: FirstName
+  type: http
+  seq: 1
+}
+
+patch {
+  url: https://restful-booker.herokuapp.com/booking/1414
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "firstname" : "Tests"
+  }
+}

@@ -1,0 +1,18 @@
+meta {
+  name: GetAuth
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://restful-booker.herokuapp.com/auth
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "username": "admin",
+    "password": "password123"
+  }
+}

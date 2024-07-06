@@ -1,0 +1,25 @@
+meta {
+  name: Booking
+  type: http
+  seq: 1
+}
+
+post {
+  url: https://restful-booker.herokuapp.com/booking
+  body: json
+  auth: none
+}
+
+body:json {
+     {
+      "firstname" : "Test",
+      "lastname" : "Testowski",
+      "totalprice" : 99,
+      "depositpaid" : true,
+      "bookingdates" : {
+          "checkin" : "2024-05-07",
+          "checkout" : "2019-05-09"
+      },
+      "additionalneeds" : "Dinner"
+      }
+}

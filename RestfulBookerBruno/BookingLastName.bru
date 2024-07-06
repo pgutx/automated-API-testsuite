@@ -1,0 +1,15 @@
+meta {
+  name: BookingLastName
+  type: http
+  seq: 1
+}
+
+get {
+  url: https://restful-booker.herokuapp.com/booking?lastname=Smith
+  body: none
+  auth: none
+}
+
+params:query {
+  lastname: Smith
+}
