@@ -139,17 +139,39 @@ test.describe('Restful booker - API testsuite', async() =>{
 
     });
 
+    test('PATCH booking', async({ request }) => {
+
+        const patchResponse = await request.patch('/booking/10', {
+            headers: {
+                Cookie: `token=${authTokenValue}`
+            },
+            data: {
+              firstname : "John",
+              lastname : "Smith",
+            }
+        })
+
+        const jsonResponse = await patchResponse.json();
+
+        console.log(jsonResponse);
+
+        expect(patchResponse.ok()).toBeTruthy();
+
+        expect(patchResponse.status()).toBe(200);
+
+    });
+
     test('DELETE booking', async({ request }) => {
 
-        const putResponse = await request.delete('/booking/1', {
+        const deleteResponse = await request.delete('/booking/250', {
             headers: {
                 Cookie: `token=${authTokenValue}`
             },
         })
 
-        expect(putResponse.ok()).toBeTruthy();
+        expect(deleteResponse.ok()).toBeTruthy();
 
-        expect(putResponse.status()).toBe(201);
+        expect(deleteResponse.status()).toBe(201);
 
     });
 
