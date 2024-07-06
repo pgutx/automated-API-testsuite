@@ -1,5 +1,4 @@
 import { test, expect } from '@playwright/test';
-import { request } from 'http';
 
 test.describe('Restful booker - API testsuite', async() =>{
 
